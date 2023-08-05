@@ -1,0 +1,32 @@
+{
+  "index": "Introduction",
+  "-- Tutorials": {
+    "type": "separator",
+    "title": "Tutorials"
+  },
+  "get-started": "Get Started",
+  "-- Design": {
+    "type": "separator",
+    "title": "Design"
+  },
+  "db-design": "Database Design",
+  "next.js-figma": {
+    "title": "UI Design - Figma ↗",
+    "href": "https://www.figma.com/file/NWU9BqtgXH4WZmBuEWUlVH/Cafeteria?type=design&node-id=0%3A1&t=2CNfDxghbK04aOCP-1",
+    "newWindow": true
+  },
+  "-- More": {
+    "type": "separator",
+    "title": "More"
+  },
+  "contribution": "Contribution",
+  "about-link": {
+    "title": "About Cafeteria",
+    "href": "/about"
+  },
+  "next.js-link": {
+    "title": "NextCafeteria ↗",
+    "href": "https://www.figma.com/file/NWU9BqtgXH4WZmBuEWUlVH/Cafeteria?type=design&node-id=0%3A1&t=2CNfDxghbK04aOCP-1",
+    "newWindow": true
+  }
+}
