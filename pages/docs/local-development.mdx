@@ -1,0 +1,39 @@
+import { Steps } from 'nextra-theme-docs'
+
+# Local deployment
+
+Cafeteria can be built and run locally by following the steps below.
+
+<Steps>
+
+### 1. Setup environment variables
+
+Copy `.env.example` to `.env` and fill in the environment variables.
+
+- `FIREBASE*`: Firebase config. See [here](https://firebase.google.com/docs/web/setup#config-object).
+- `NEXT_PUBLIC_GOOGLE_LOGIN`, `GOOGLE_ID`, `GOOGLE_SECRET`: Google OAuth config. See [here](https://next-auth.js.org/providers/google).
+- `NEXT_PUBLIC_GITHUB_LOGIN`, `GITHUB_ID`, `GITHUB_SECRET`: Github OAuth config. See [here](https://next-auth.js.org/providers/github).
+
+First, run the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### 2. Deployment
+
+Build the app:
+
+```bash
+npm run build
+```
+
+Start the app:
+
+```bash
+npm run start
+```
+
+</Steps>

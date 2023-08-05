@@ -6,7 +6,6 @@
     "start": "next start",
     "build": "next build"
   },
-  "author": "Neural Research Lab <contact@nrl.ai>",
   "license": "MIT",
   "dependencies": {
     "@vercel/og": "^0.2.0",

@@ -1,44 +1,58 @@
-import { Steps } from 'nextra/components'
+import { Steps } from 'nextra-theme-docs'
 
-## Deploy to Vercel
+# Get started with Vercel
 
-## 1. Setup environment variables
+Vercel is the easiest way to deploy your Next.js apps. It's a cloud platform for static sites and Serverless Functions. Cafeteria can be deployed to Vercel without much effort.
 
-- Create a new project on [Vercel](https://vercel.com/).
-- Add all environment variables to the project (see [.env.sample](.env.sample)).
+<Steps>
 
-## 2. Deploy
+### 1. Fork the project
 
-- Deploy the app using Vercel UI.
+- Fork the [Cafeteria repository](https://github.com/NextCafeteria/cafeteria) to your own GitHub account.
+- Update information in `package.json` file.
 
-## Deploy locally
+### 2. Setup Vercel Project
 
-### 1. Setup environment variables
+- Create a new project on [Vercel](https://vercel.com/): Click the Add New… drop-down button and select **Project**.
 
-Copy `.env.example` to `.env` and fill in the environment variables.
+![](/images/add-new-project-light.png)
 
-- `FIREBASE*`: Firebase config. See [here](https://firebase.google.com/docs/web/setup#config-object).
-- `NEXT_PUBLIC_GOOGLE_LOGIN`, `GOOGLE_ID`, `GOOGLE_SECRET`: Google OAuth config. See [here](https://next-auth.js.org/providers/google).
-- `NEXT_PUBLIC_GITHUB_LOGIN`, `GITHUB_ID`, `GITHUB_SECRET`: Github OAuth config. See [here](https://next-auth.js.org/providers/github).
+- Add all environment variables to the project. To declare an **Environment Variable** for your deployment, go to the **Environment Variables** page of your **Project Settings**.
 
-First, run the development server:
+![](/images/add-env-variable-light.avif)
 
-```bash
-npm run dev
-```
+**Next.js variables:**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    + `NEXT_PUBLIC_SERVER_URL`: The URL of the server. If you deploy the server to Vercel, you can use the URL of the server. If you deploy the server to another platform, you need to use the URL of the server.
+    + `NEXTAUTH_URL`: The URL of the client. If you deploy the client to Vercel, you can use the URL of the client. If you deploy the client to another platform, you need to use the URL of the client.
+    + `NEXTAUTH_SECRET`: A secret used to encrypt session data on the server. You can generate a secret using `openssl rand -hex 64`.
 
-### 2. Deployment
+**Firebase variables:** Go to your Firebase project settings and copy the config. Then, add the following variables to the project. (See more [here](https://firebase.google.com/docs/web/setup#config-object))
 
-Build the app:
+    + `FIREBASE_API_KEY`: The API key of your Firebase project.
+    + `FIREBASE_APP_ID`: The app ID of your Firebase project.
+    + `FIREBASE_AUTH_DOMAIN`: The auth domain of your Firebase project.
+    + `FIREBASE_DATABASE_URL`: The database URL of your Firebase project.
+    + `FIREBASE_PROJECT_ID`: The project ID of your Firebase project.
+    + `NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET`: The storage bucket of your Firebase project.
+    + `FIREBASE_MESSAGING_SENDER_ID`: The messaging sender ID of your Firebase project.
 
-```bash
-npm run build
-```
+**Google OAuth variables:** Go to the [Google Cloud Console](https://console.cloud.google.com/) and create a new project. Then, enable the Google OAuth API and create a new OAuth client ID. Finally, add the following variables to the project. (See more [here](https://next-auth.js.org/providers/google)).
 
-Start the app:
+    + `NEXT_PUBLIC_GOOGLE_LOGIN`: Enable Google OAuth login.
+    + `GOOGLE_ID`: The client ID of your Google OAuth client.
+    + `GOOGLE_SECRET`: The client secret of your Google OAuth client.
 
-```bash
-npm run start
-```
+**VietQR variables for online payment:** Go to the [VietQR](https://vietqr.io/) and create a new account. Then, create a new merchant and add the following variables to the project.
+
+    + `NEXT_PUBLIC_VIETQR_MERCHANT_ACCOUNT_NAME`: The account name of your VietQR merchant.
+    + `NEXT_PUBLIC_VIETQR_MERCHANT_INFO_PREFIX`: The prefix of your VietQR merchant.
+    + `NEXT_PUBLIC_VIETQR_IMAGE`: The image of your VietQR merchant.
+
+### 3. Deploy
+
+- Click the **Deploy** button to deploy the project.
+- To add a custom domain, go to the **Domains** page of your **Project Settings**. See more [here](https://vercel.com/docs/concepts/projects/domains/add-a-domain).
+
+</Steps>
+

@@ -4,7 +4,8 @@
     "type": "separator",
     "title": "Tutorials"
   },
-  "get-started": "Get Started",
+  "get-started": "Get Started with Vercel",
+  "local-development": "Local Development",
   "-- Design": {
     "type": "separator",
     "title": "Design"
