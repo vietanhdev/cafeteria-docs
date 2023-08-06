@@ -6,6 +6,7 @@
   },
   "get-started": "Get Started with Vercel",
   "local-development": "Local Development",
+  "store-settings": "Store Customization",
   "-- Design": {
     "type": "separator",
     "title": "Design"
